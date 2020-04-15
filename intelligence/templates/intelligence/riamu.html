@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta http-equiv="refresh" content="0; url={%url 'intelligence:result' %}">
+  <meta charset="utf-8">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Cinderella Recommend">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="AIがあなたにおすすめの恒常SSRを診断します。">
+  <meta property="og:url" content="https://cinderella_recommend.pythonanywhere.com/">
+  <meta property="og:image" content="https://fruity.cinderella_recommend.com/static/intelligence/img/main.png">
+  <meta name="description" content="AIがあなたにおすすめの恒常SSRを診断します。">
+  <link rel="apple-touch-icon" type="image/png" href="{% static "intelligence/img/apple-touch-icon-180x180.png" %}">
+  <link rel="icon" type="image/png" href="{% static "intelligence/img/icon-192x192.png" %}">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="{% static "intelligence/img/favicon.ico" %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>AI診断中 - Cinderella Recommend</title>
+  <link href="{% static "intelligence/css/style.css" %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <h3>AI診断中…</h3>
+  <span class="note">というわけで計算には約30秒かかります。<br>待ち時間に私の担当でも見てください。<br>計算終了後、自動的に結果を表示します。</span>
+  <img class="riamu" src="{% static "intelligence/img/riamu/" %}{{addr}}.png">
+  <h4>担当からひとこと言わせて！</h4>
+  <span class="comment">{{text}}</span>
+  <p class="box">ここまで来るなんて読むの速いですね…<br>もうすぐ結果が出ると思うのでお待ちください。<br>※計算終了後、自動的に結果を表示します。</p>
+</body>
+
+</html>

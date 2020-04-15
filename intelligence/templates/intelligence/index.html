@@ -1,0 +1,18 @@
+{% extends "intelligence/base.html" %}
+{% load static %}
+{% block title %}Cinderella Recommend{% endblock title %}
+
+{% block content %}
+  <img id="heroimg" src="{% static "intelligence/img/heroimg.png" %}">
+  <div id="instruction">
+    <h3>せつめい</h3>
+    <ul>
+      <li>・6枚の画像がランダムに表示されます。</li>
+      <li>・1番好きなのと6番目に好きなのを順に<br>&nbsp;&nbsp;&nbsp;タップしてください。</li>
+      <li>・10回選んだらAIがあなたにおすすめの<br>&nbsp;&nbsp;&nbsp;恒常SSRを診断します。</li>
+    </ul>
+  </div>
+  <a href="{%url 'intelligence:calc' %}" class="start-btn">診断開始</a>
+  <span class="note">当サイトは<a href="https://twitter.com/susi_silica">@susi_silica</a>が運営しています。</span>
+  <span class="note">誤字・脱字、不具合等ございましたら<br>ご連絡いただけると幸いです。</span>
+{% endblock %}

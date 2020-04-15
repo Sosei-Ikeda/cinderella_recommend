@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="Cinderella Recommend">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="AIがあなたにおすすめの恒常SSRを診断します。">
+  <meta property="og:url" content="https://cinderella_recommend.pythonanywhere.com/">
+  <meta property="og:image" content="https://cinderella_recommend.pythonanywhere.com/static/intelligence/img/main.png">
+  <meta name="description" content="AIがあなたにおすすめの恒常SSRを診断します。">
+  <link rel="apple-touch-icon" type="image/png" href="{% static "intelligence/img/apple-touch-icon-180x180.png" %}">
+  <link rel="icon" type="image/png" href="{% static "intelligence/img/icon-192x192.png" %}">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="{% static "intelligence/img/favicon.ico" %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %}{% endblock title %}</title>
+  <link href="{% static "intelligence/css/style.css" %}" rel="stylesheet">
+</head>
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>

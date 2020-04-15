@@ -1,0 +1,20 @@
+{% extends "intelligence/base.html" %}
+{% load static %}
+{% block title %}Cinderella Recommend{% endblock title %}
+
+{% block content %}
+
+  <h3>{{number}}/10</h3>
+
+  <form id="calc" method="post" action="calc">
+    {% csrf_token %}
+    <button {{lis_0}} type="submit" name="num_post" value="{{var_0}}"><img src="{% static "intelligence/img/rawSR/" %}{{var_0}}.jpg"></button>
+    <button {{lis_1}} type="submit" name="num_post" value="{{var_1}}"><img src="{% static "intelligence/img/rawSR/" %}{{var_1}}.jpg"></button>
+    <button {{lis_2}} type="submit" name="num_post" value="{{var_2}}"><img src="{% static "intelligence/img/rawSR/" %}{{var_2}}.jpg"></button>
+    <button {{lis_3}} type="submit" name="num_post" value="{{var_3}}"><img src="{% static "intelligence/img/rawSR/" %}{{var_3}}.jpg"></button>
+    <button {{lis_4}} type="submit" name="num_post" value="{{var_4}}"><img src="{% static "intelligence/img/rawSR/" %}{{var_4}}.jpg"></button>
+    <button {{lis_5}} type="submit" name="num_post" value="{{var_5}}"><img src="{% static "intelligence/img/rawSR/" %}{{var_5}}.jpg"></button>
+  </form>
+
+  <p>{{text}}</p>
+{% endblock %}

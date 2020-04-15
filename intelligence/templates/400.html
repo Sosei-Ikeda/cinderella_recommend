@@ -1,0 +1,11 @@
+{% extends "intelligence/base.html" %}
+{% load static %}
+{% block title %}400 - Cinderella Recommend{% endblock title %}
+
+{% block content %}
+  <h3>400(Bad Request)</h3>
+  <span class="note">制作者が確認していないエラーが生じました。<br>お手数ですが<a href="https://twitter.com/susi_silica">@susi_silica</a>までご連絡ください。</span>
+
+  <p class="box"></p>
+  <a class="re-btn" href="{%url 'intelligence:index' %}" class="nav-link">ホームに戻る</a>
+{% endblock %}

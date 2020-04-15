@@ -1,0 +1,14 @@
+{% extends "intelligence/base.html" %}
+{% load static %}
+{% block title %}404 - Cinderella Recommend{% endblock title %}
+
+{% block content %}
+  <h3>404(Not Found)</h3>
+  <span class="note">お探しのページは見つかりませんでした。<br>不具合あれば<a href="https://twitter.com/susi_silica">@susi_silica</a>まで。</span>
+  <span class="note">というわけで私の担当でも見てください。<br>ホームにはこのページの一番下から戻れます。</span>
+  <img class="riamu" src="{% static "intelligence/img/riamu/jptuhrwh96.png" %}">
+  <h4>担当からひとこと言わせて！</h4>
+  <span class="comment">7th大阪直前のコミュより、エアギターを雪美ちゃんと演奏(?)するりあむです。年下アイドルと(精神年齢が近いから)仲良くできる夢見りあむ…良。</span>
+  <p class="box"></p>
+  <a class="re-btn" href="{%url 'intelligence:index' %}" class="nav-link">ホームに戻る</a>
+{% endblock %}

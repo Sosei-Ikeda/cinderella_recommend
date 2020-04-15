@@ -1,0 +1,31 @@
+{% extends "intelligence/base.html" %}
+{% load static %}
+{% block title %}診断結果 - Cinderella Recommend{% endblock title %}
+
+{% block content %}
+<h3>診断結果</h3>
+<p class="name">1位:{{1st_name}}</p>
+<img class="ssr" src="{% static "intelligence/img/rawSSR/" %}{{1st}}.jpg">
+<p class="name">2位:{{2nd_name}}</p>
+<img class="ssr" src="{% static "intelligence/img/rawSSR/" %}{{2nd}}.jpg">
+<p class="name">3位:{{3rd_name}}</p>
+<img class="ssr" src="{% static "intelligence/img/rawSSR/" %}{{3rd}}.jpg">
+<p class="name">4位:{{4th_name}}</p>
+<img class="ssr" src="{% static "intelligence/img/rawSSR/" %}{{4th}}.jpg">
+<p class="name">5位:{{5th_name}}</p>
+<img class="ssr" src="{% static "intelligence/img/rawSSR/" %}{{5th}}.jpg">
+
+<div id="tweet-area"></div>
+<a class="re-btn" href="{%url 'intelligence:index' %}" class="nav-link">もう一度診断する</a>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+  twttr.widgets.createShareButton(
+    "hoge",
+    document.getElementById("tweet-area"),
+    {
+      size: "large",
+      text: "AI診断による私におすすめの恒常SSRは\n1位:{{1st_name}}\n2位:{{2nd_name}}\n3位:{{3rd_name}}\n4位:{{4th_name}}\n5位:{{5th_name}}\n\n#Cinderella_Scout\n\nhttps://cinderella_recommend.pythonanywhere.com/\n",
+    }
+  );
+</script>
+{% endblock %}
