@@ -62,7 +62,7 @@ def calc(request):
         lis = ["","","","","",""]
         if num_for != 0:
             num_post = int(request.POST['num_post'])
-            request.session[f'num_{num_for-1}'] = num_post
+            request.session[f"num_{num_for-1}"] = num_post
         if num_for%2 == 0:
             arange = np.arange(19)
             np.random.shuffle(arange)
