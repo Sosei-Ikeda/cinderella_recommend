@@ -16,48 +16,7 @@ def calc(request):
         request.session['num_19'] = int(request.POST['num_post'])
         request.session['num_for'] = num_for+1
         request.session['num_iter'] = num_iter + 1
-        addr_lis = ["nbydamrmiu",
-                    "4gnd5ax2em",
-                    "a4wx6iwmjt",
-                    "6jamtxg969",
-                    "ys7e8erhru",
-                    "e363ysgbtr",
-                    "iu9855px6s",
-                    "jiz6jtu6m8",
-                    "x493r73kfg",
-                    "yrb2r9hbn6",
-                    "7nhcfu9myc",
-                    "7exer22bge",
-                    "sephynxtgj",
-                    "pnxnsip8p7",
-                    "f9fct6ha8u",
-                    "pkciixxm96",
-                    "kacrby7uge",
-                    "4gjbswztpw",
-                    "6xy7zgkw2i",
-                    "fm2bigfyat"]
-        text_lis = ["夢見りあむお得意の早口リフレインですね。Pからアイドルにならないか誘われた際のセリフです。スカウトは困惑することだと思いますが全くの他人にこの反応…只者ではない…",
-                    "コミュでPと初めて会ったときの自己紹介です。これが出発点の夢見りあむがすぐの総選挙で3位になったと考えると心中察するに余りあります。",
-                    "夢見りあむ山盛りセットです。短い文章ですがこれでもかと夢見りあむのキャラクターが表現されています。",
-                    "夢見りあむがドルオタなことは結構有名かと思いますが、その理由も本人の口から語られています。奇抜な設定ばかりが目を引きますが、実は自分に誇れるものを手に入れるという王道のストーリー展開です。",
-                    "これは総選挙前のセリフです。大事なことなのでもう一度言いますがこれは総選挙前のセリフです。ここからあんなことになるとは誰も想像できなかったのではないでしょうか。",
-                    "ネット民の注目を浴びて、”人気”ではないのに上位になる、珍しい現象ではないけれど他の投票モノと違って連続的な時間の進行にしたがって彼女には次がある。特有の誤解を生むヘタな表現ながら、彼女のこれからにぼんやりとした不安を抱かせる圧巻の受賞コメントです。",
-                    "SSR実装です。総選挙について触れてきました。「ぼくのこと話題にして、ぼくじゃないぼくの話をしてた。」は当時衝撃を覚えました。ここでしっかり総選挙について触れたのは良くも悪くも夢見りあむにとっての転換点だったと思います。",
-                    "SSRの特訓後です。ここでメンタルの強さを見せてくるのズルいと思いました。アイドルらしさに囚われるのをやめたりあむですが、このSSRのポスターでは「自分のためであってもステージを楽しむりあむの姿は誰よりアイドルらしい。りあむはまだ、それを知らない。」とあります。泣きました。",
-                    "SSR+の親愛度MAX演出です。ここまでのりあむの歩みを考えると激エモです。あまり言葉はいらないと思うのでこのあたりで。",
-                    "意外に思われるかもしれないと思ってこのセリフを選びました。アイドルらしくなくてもいいけどアイドルである以上理想を目指して努力することはやめない、というところがいいなあと思います。",
-                    "他のアイドルとの絡みがほとんどない中、歌う一曲目が総選挙曲。プレッシャーの中で卑屈になりながらも他のアイドルたちに迎え入れられて仲間になる(Sun!High!Gold!)→仲間のアイドルたちと打ち解けて仲良くなる(夢をのぞいたら)と二つのコミュを通して丁寧に描かれてよかったです。",
-                    "りあむ曰く「マウントとられまくり」の環境で育ったりあむがプロフィールの出身地の欄に書いたのは「やさしい世界」。本物の「やさしい世界」をりあむは見つけられたんだということが分かり微笑ましい瞬間です。",
-                    "なんだこれ(褒め言葉)こういうところはずっと変わらないでいてほしいと思います。面白いので。",
-                    "夢見りあむの面白さが出たいいコメントだと思います。優勝…優勝ってりあむお前…",
-                    "宿屋のリポートの仕事で文香ちゃんにフォローしてもらった後にお礼を言いに行く場面です。こういう絡みをしてくるアイドルは珍しいと思うので他の担当Pさんも自担とりあむの絡み見たくないですか？どうですか？",
-                    "「事務所の中にママを増やしていきたい…」と語っているのでりあむの登場が増えると他の担当Pさんも自担がママになる場面を見られるかもしれませんよ…？",
-                    "夢をのぞいたらの歌詞を使いながらきれいに心境を表現しています。今はこの歌は自分には似合わないけれど「いつかこの歌を、ぼくの本当にしたいから…」という締めくくりはグッときます。",
-                    "光をつかんだ未央、光に強気に手を伸ばす加蓮、控えめに手を伸ばすりあむ。それでもりあむが手を伸ばし始めた、ということに大きな意味があると思います。",
-                    "「ふたり」は本田未央と北条加蓮のこと。「積み重ねてきたものも、誰かと歩いてきた道も、」まだないと語るりあむがこれから、彼女のことが「アイドルに見えた」Pたちと一緒にどのような道を歩んでいくのか期待が膨らむ一言。",
-                    "これを見たとき震えましたね。デビューから1年、夢見りあむはここまで来ました。"]
-        rand_num = np.random.randint(20)
-        return render(request, 'intelligence/riamu.html', {'addr':addr_lis[rand_num], 'text':text_lis[rand_num]})
+        return render(request, 'intelligence/riamu.html')
     else:
         lis = ["","","","","",""]
         if num_for != 0:
@@ -290,69 +249,105 @@ def result(request):
             dx = col2im(dcol, self.x.shape, self.pool_h, self.pool_w, self.stride, self.pad)
             
             return dx
+        
+    class Dropout:
+        def __init__(self, dropout_ratio=0.5):
+            self.dropout_ratio = dropout_ratio
+            self.mask = None
     
-    class SimpleConvNet:
-        def __init__(self, input_dim=(1, 28, 28), 
-                     conv_param={'filter_num':30, 'filter_size':5, 'pad':0, 'stride':1},
-                     hidden_size=100, output_size=10):
-            filter_num = conv_param['filter_num']
-            filter_size = conv_param['filter_size']
-            filter_pad = conv_param['pad']
-            filter_stride = conv_param['stride']
-            input_size = input_dim[1]
-            conv_output_size = (input_size - filter_size + 2*filter_pad) / filter_stride + 1
-            pool_output_size = int(filter_num * (conv_output_size/2) * (conv_output_size/2))
+        def forward(self, x, train_flg=True):
+            if train_flg:
+                self.mask = np.random.rand(*x.shape) > self.dropout_ratio
+                return x * self.mask
+            else:
+                return x * (1.0 - self.dropout_ratio)
     
+        def backward(self, dout):
+            return dout * self.mask
+
+    class DeepConvNet:
+        def __init__(self, input_dim=(1, 28, 28),
+                     conv_param_1 = {'filter_num':16, 'filter_size':3, 'pad':1, 'stride':1},
+                     conv_param_2 = {'filter_num':32, 'filter_size':3, 'pad':1, 'stride':1},
+                     conv_param_3 = {'filter_num':64, 'filter_size':3, 'pad':1, 'stride':1},
+                     hidden_size=50, output_size=10):
+            pre_node_nums = np.array([1*3*3, 16*3*3, 32*3*3, 64*8*8, hidden_size])
+            weight_init_scales = np.sqrt(2.0 / pre_node_nums)
+            
             self.params = {}
-            self.params['W1'] = np.sqrt(2.0/(input_dim[0]*filter_size*filter_size)) * \
-                                np.random.randn(filter_num, input_dim[0], filter_size, filter_size)
-            self.params['b1'] = np.zeros(filter_num)
-            self.params['W2'] = np.sqrt(2.0/(filter_num*filter_size*filter_size)) * \
-                                np.random.randn(pool_output_size, hidden_size)
-            self.params['b2'] = np.zeros(hidden_size)
-            self.params['W3'] = np.sqrt(2.0/hidden_size) * \
-                                np.random.randn(hidden_size, output_size)
-            self.params['b3'] = np.zeros(output_size)
+            pre_channel_num = input_dim[0]
+            for idx, conv_param in enumerate([conv_param_1, conv_param_2, conv_param_3]):
+                self.params['W' + str(idx+1)] = weight_init_scales[idx] * np.random.randn(conv_param['filter_num'], pre_channel_num, conv_param['filter_size'], conv_param['filter_size'])
+                self.params['b' + str(idx+1)] = np.zeros(conv_param['filter_num'])
+                pre_channel_num = conv_param['filter_num']
+            self.params['W4'] = weight_init_scales[3] * np.random.randn(pre_node_nums[3], hidden_size)
+            self.params['b4'] = np.zeros(hidden_size)
+            self.params['W5'] = weight_init_scales[4] * np.random.randn(hidden_size, output_size)
+            self.params['b5'] = np.zeros(output_size)
     
-            self.layers = OrderedDict()
-            self.layers['Conv1'] = Convolution(self.params['W1'], self.params['b1'],
-                                               conv_param['stride'], conv_param['pad'])
-            self.layers['Relu1'] = Relu()
-            self.layers['Pool1'] = Pooling(pool_h=2, pool_w=2, stride=2)
-            self.layers['Affine1'] = Affine(self.params['W2'], self.params['b2'])
-            self.layers['Relu2'] = Relu()
-            self.layers['Affine2'] = Affine(self.params['W3'], self.params['b3'])
-    
+            self.layers = []
+            self.layers.append(Convolution(self.params['W1'], self.params['b1'], 
+                               conv_param_1['stride'], conv_param_1['pad']))
+            self.layers.append(Relu())
+            self.layers.append(Pooling(pool_h=2, pool_w=2, stride=2))
+            self.layers.append(Convolution(self.params['W2'], self.params['b2'], 
+                               conv_param_2['stride'], conv_param_2['pad']))
+            self.layers.append(Relu())
+            self.layers.append(Pooling(pool_h=2, pool_w=2, stride=2))
+            self.layers.append(Convolution(self.params['W3'], self.params['b3'],
+                               conv_param_3['stride'], conv_param_3['pad']))
+            self.layers.append(Relu())
+            self.layers.append(Pooling(pool_h=2, pool_w=2, stride=2))
+            self.layers.append(Affine(self.params['W4'], self.params['b4']))
+            self.layers.append(Relu())
+            self.layers.append(Dropout(0.5))
+            self.layers.append(Affine(self.params['W5'], self.params['b5']))
+            self.layers.append(Dropout(0.5))
+            
             self.last_layer = SoftmaxWithLoss()
     
-        def predict(self, x):
-            for layer in self.layers.values():
-                x = layer.forward(x)
-    
+        def predict(self, x, train_flg=False):
+            for layer in self.layers:
+                if isinstance(layer, Dropout):
+                    x = layer.forward(x, train_flg)
+                else:
+                    x = layer.forward(x)
             return x
     
         def loss(self, x, t):
-            y = self.predict(x)
+            y = self.predict(x, train_flg=True)
             return self.last_layer.forward(y, t)
+    
+        def accuracy(self, x, t, batch_size=100):
+            if t.ndim != 1 : t = np.argmax(t, axis=1)
+    
+            acc = 0.0
+    
+            for i in range(int(x.shape[0] / batch_size)):
+                tx = x[i*batch_size:(i+1)*batch_size]
+                tt = t[i*batch_size:(i+1)*batch_size]
+                y = self.predict(tx, train_flg=False)
+                y = np.argmax(y, axis=1)
+                acc += np.sum(y == tt)
+    
+            return acc / x.shape[0]
     
         def gradient(self, x, t):
             self.loss(x, t)
-    
             dout = 1
             dout = self.last_layer.backward(dout)
     
-            layers = list(self.layers.values())
-            layers.reverse()
-            for layer in layers:
+            tmp_layers = self.layers.copy()
+            tmp_layers.reverse()
+            for layer in tmp_layers:
                 dout = layer.backward(dout)
-    
             grads = {}
-            grads['W1'], grads['b1'] = self.layers['Conv1'].dW, self.layers['Conv1'].db
-            grads['W2'], grads['b2'] = self.layers['Affine1'].dW, self.layers['Affine1'].db
-            grads['W3'], grads['b3'] = self.layers['Affine2'].dW, self.layers['Affine2'].db
+            for i, layer_idx in enumerate((0, 3, 6, 9, 12)):
+                grads['W' + str(i+1)] = self.layers[layer_idx].dW
+                grads['b' + str(i+1)] = self.layers[layer_idx].db
     
-            return grads
-    
+            return grads    
+        
     class AdaGrad:
         def __init__(self, lr=0.01):
             self.lr = lr
@@ -386,7 +381,7 @@ def result(request):
     
             grads = self.network.gradient(x_batch, t_batch)
             self.optimizer.update(self.network.params, grads)
-    
+            
         def train(self):
             for i in range(20):
                 self.train_step()
@@ -395,19 +390,21 @@ def result(request):
     num_list = []
     for i in range(20):
         num_list.append(int(request.session.get(f'num_{i}')))
-    x_train = np.zeros((200,3,64,64))
+    x_train = np.zeros((200,1,64,64))
     for i in range(20):
-        x_train[i*10:(i+1)*10] = np.load(f"intelligence/data/{num_list[i]}.npy")
-    t_train = np.load("intelligence/data/t.npy")
-    
-    network = SimpleConvNet(input_dim=(3,64,64), 
-                            conv_param = {'filter_num': 30, 'filter_size': 5, 'pad': 0, 'stride': 1},
-                            hidden_size=100, output_size=2)                     
+        x_train[i*10:(i+1)*10] = np.load(f"intelligence/gray_data/{num_list[i]}.npy")
+    t_train = np.load("intelligence/gray_data/t.npy")
+                   
+    network = DeepConvNet(input_dim=(1,64,64), 
+                            conv_param_1 = {'filter_num':16, 'filter_size':3, 'pad':1, 'stride':1},
+                            conv_param_2 = {'filter_num':32, 'filter_size':3, 'pad':1, 'stride':1},
+                            conv_param_3 = {'filter_num':64, 'filter_size':3, 'pad':1, 'stride':1},
+                            hidden_size=100, output_size=2)     
     trainer = Trainer(network, x_train, t_train,
                       mini_batch_size=10,
-                      optimizer_param={'lr': 0.01},)
+                      optimizer_param={'lr': 0.01},)                
     trainer.train()
-    test = np.load("intelligence/data/ssr.npy")
+    test = np.load("intelligence/gray_data/ssr.npy")
     result = softmax(network.predict(test))
     result = np.argsort(result[:,0])
     
